@@ -28,6 +28,12 @@ public class VaccinationController {
 
     }
 
+    @GetMapping("/vac")
+    public ResponseEntity<?> findAllVaccinations() {
+        return new ResponseEntity<>(ResultResponse.builder().status(true).message(HttpMessageResponse.FIND_SUCESS.getValue()).data(vaccinationService.findAllVaccinations()).build(), HttpStatus.OK);
+
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteById(@PathVariable("id")int id){
         Optional<Vaccination> vaccination = vaccinationService.findById(id);

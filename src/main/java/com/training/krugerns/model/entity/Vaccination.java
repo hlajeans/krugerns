@@ -21,9 +21,6 @@ public class Vaccination {
     @Column(name = "fecha")
     private Date date;
 
-    @Column(name = "estado")
-    private String state;
-
     @Column(name = "dosis")
     private int dose;
 

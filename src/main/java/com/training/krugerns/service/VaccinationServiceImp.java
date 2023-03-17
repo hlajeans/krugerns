@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -30,5 +31,11 @@ public class VaccinationServiceImp implements VaccinationService{
     @Override
     public void delete(Vaccination vaccination) {
         vaccinationRepository.delete(vaccination);
+    }
+
+    @Override
+    public List<Vaccination> findAllVaccinations() {
+        List<Vaccination> vaccinations = vaccinationRepository.findAllVaccinations();
+        return vaccinations;
     }
 }

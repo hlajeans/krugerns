@@ -17,7 +17,7 @@ public class User {
     @Column(name = "id_usuario")
     private int id;
 
-    @Column(name = "ci", unique = true ,length =10)
+    @Column(name = "ci", unique = true ,length = 10)
     private int ci;
 
     @Column(name = "apellidos")

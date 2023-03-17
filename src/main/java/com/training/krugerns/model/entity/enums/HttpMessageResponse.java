@@ -19,7 +19,8 @@ public enum HttpMessageResponse {
     /*
     * Enums for fails
     */
-    NOT_FOUND("No se encontro el registro solicitado");
+    NOT_FOUND("No se encontro el registro solicitado"),
+    CLONED("El CI de la persona ya se encuentra registrado");
 
     private final String value;
 }
