@@ -9,8 +9,6 @@ la finalidad de proveer legibilidad sobre el codigo y escalabilidad.
 
 ## Datos a considerar: 
 * Se realizó la implementacion de la documentacion API con Swagger
-* Se realizaron las pruebas unitarias correspondiente para cada endpoint
-* Se realizó la documentacion correspondiente para cada archivo del proyecto
 * La base de datos, y demas dependencias, como tambien el archivo .war pueden encontrarse en la carpeta "Resources" de este proyecto
 
 ## Ejecucion
