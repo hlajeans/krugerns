@@ -11,14 +11,14 @@ la finalidad de proveer legibilidad sobre el codigo y escalabilidad.
 * Se realizó la implementacion de la documentacion API con Swagger
 * Se realizaron las pruebas unitarias correspondiente para cada endpoint
 * Se realizó la documentacion correspondiente para cada archivo del proyecto
+* La base de datos, y demas dependencias, como tambien el archivo .war pueden encontrarse en la carpeta "Resources" de este proyecto
 
 ## Ejecucion
-El proyecto se encuentra alojado en el siguiente [enlace](), donde se puede acceder
-con Postman o herramientas similares.
 Si se desea recrear el proyecto en un entorno privado o en un localhost, 
 pueden hallarse los archivos correspondientes en el siguiente repositorio de 
-[Drive]().
-
+[Drive](https://drive.google.com/drive/folders/1ZWjl370iU3yD4ymJmHLLrDpoXc7FJkdl?usp=sharing),
+o realizar la ejecucion del proyecto desde IntelliJ IDEA o cargar el archivo .war que
+se encuentra situado en la carpeta "Resources".
 
 
 

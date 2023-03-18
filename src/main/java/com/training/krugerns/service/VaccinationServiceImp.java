@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,6 +37,17 @@ public class VaccinationServiceImp implements VaccinationService{
     @Override
     public List<Vaccination> findAllVaccinations() {
         List<Vaccination> vaccinations = vaccinationRepository.findAllVaccinations();
+        return vaccinations;
+    }
+
+    @Override
+    public List<Vaccination> findByRangeDate(Date initial, Date destiny) {
+        List<Vaccination> vaccinations;
+        if(initial.before(destiny)){
+            vaccinations = vaccinationRepository.findByRangeDate(initial, destiny);
+        }else{
+            vaccinations = null;
+        }
         return vaccinations;
     }
 }
