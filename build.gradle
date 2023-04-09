@@ -49,4 +49,10 @@ war {
 jacoco {
     toolVersion = "0.8.8"
 }
+
+jar {
+    baseName = 'app'
+    version = '0.0.1'
+}
+
 tasks.jar {enabled = false}
