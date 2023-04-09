@@ -58,7 +58,6 @@ public class UserServiceImp implements UserService {
         return user;
     }
 
-
     @Override
     public void update(User user) {
         userRepository.save(user);
