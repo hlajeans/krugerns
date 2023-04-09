@@ -10,10 +10,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import java.util.Date;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/vacunados")
+@RequestMapping("/vac")
 public class VaccinationController {
     private final VaccinationService vaccinationService;
 
@@ -22,17 +24,16 @@ public class VaccinationController {
         this.vaccinationService = vaccinationService;
     }
 
-    @GetMapping("/users")
-    public ResponseEntity<?> findAll(Pageable pageable) {
-        return new ResponseEntity<>(ResultResponse.builder().status(true).message(HttpMessageResponse.FIND_SUCESS.getValue()).data(vaccinationService.findAll(pageable)).build(), HttpStatus.OK);
-
-    }
-
-    @GetMapping("/vac")
+    @GetMapping("/findall")
     public ResponseEntity<?> findAllVaccinations() {
         return new ResponseEntity<>(ResultResponse.builder().status(true).message(HttpMessageResponse.FIND_SUCESS.getValue()).data(vaccinationService.findAllVaccinations()).build(), HttpStatus.OK);
 
     }
+    @GetMapping("/finddate")
+    public ResponseEntity<?> findRangeDate(@Valid @RequestBody Date init, @Valid @RequestBody Date destiny){
+        return new ResponseEntity<>(ResultResponse.builder().status(true).message(HttpMessageResponse.FIND_SUCESS.getValue()).data(vaccinationService.findByRangeDate(init,destiny)),HttpStatus.OK);
+    }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteById(@PathVariable("id")int id){
